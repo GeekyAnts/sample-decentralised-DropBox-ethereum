@@ -1,6 +1,5 @@
 var HDWalletProvider = require("@truffle/hdwallet-provider");
-const mnemonic =
-  "b215115ec324b072ab8841cc968ccd5eec5a5790e3ea4629027ae1d52367a576";
+const mnemonic = "YOUR_WALLET_PRIVATE_KEY";
 
 module.exports = {
   plugins: ["truffle-security", "truffle-contract-size"],
@@ -12,8 +11,7 @@ module.exports = {
       provider: () =>
         new HDWalletProvider({
           privateKeys: [mnemonic],
-          providerOrUrl:
-            "https://rinkeby.infura.io/v3/e0c0649106b74055b75eabebb028bc5f",
+          providerOrUrl: "https://rinkeby.infura.io/v3/YOUR_INFURA_PROJECT_ID",
           numberOfAddresses: 1,
         }),
       network_id: 4,
